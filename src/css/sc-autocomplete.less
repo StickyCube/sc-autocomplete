@@ -1,0 +1,64 @@
+@sc-autocomplete-border-radius: 				4px;
+
+@sc-autocomplete-border-color: 					#B8B8B8;
+@sc-autocomplete-list-bg:						#FFFFFF;
+@sc-autocomplete-list-border-color: 			#BBBBBB;
+@sc-autocomplete-list-max-height:				200px;
+
+@sc-autocomplete-listitem-padding: 				12px;
+@sc-autocomplete-listitem-border-color: 		#AAAAAA;
+@sc-autocomplete-listitem-bg:					#EEEEEE;
+@sc-autocomplete-listitem-hover-bg:				#EEEEEE;
+@sc-autocomplete-listitem-active-bg: 			#0066CC;
+@sc-autocomplete-listitem-text-color:			#606060;
+@sc-autocomplete-listitem-active-text-color:	#FFFFFF;
+
+.sc-autocomplete-container {
+	position: relative;
+	width: 80%;
+	margin: auto;
+	padding-top: 7px;
+}
+
+.sc-autocomplete-input {
+	height: 35px;
+	width: 100%;
+	border: 1px solid @sc-autocomplete-border-color;
+	border-radius: @sc-autocomplete-border-radius;
+	padding: 0px 7px;
+	margin-bottom: 7px;
+}
+
+.sc-autocomplete-list {
+	position: absolute;
+	width: 100%;
+	max-height: @sc-autocomplete-list-max-height;
+	z-index: 5;
+	overflow-y: auto;
+	border: 1px solid @sc-autocomplete-list-border-color;
+	border-radius: @sc-autocomplete-border-radius;
+	background-color: @sc-autocomplete-list-bg;
+}
+
+.sc-autocomplete-listitem {
+	border-bottom: 1px solid @sc-autocomplete-listitem-border-color;
+	width: 100%;
+	display: inline-block;
+	padding: @sc-autocomplete-listitem-padding;
+	color: @sc-autocomplete-listitem-text-color;
+
+	&:hover {
+		cursor: pointer;
+		background-color: @sc-autocomplete-listitem-hover-bg;
+		text-decoration: none;
+	}
+
+	&.active {
+		background-color: @sc-autocomplete-listitem-active-bg;
+		color: @sc-autocomplete-listitem-active-text-color;
+	}
+
+	&:last-child {
+		border-bottom: 0px;
+	}
+}

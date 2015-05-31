@@ -1,0 +1,18 @@
+<div class="sc-autocomplete-container">
+	<div ng-show="sc.searchResults.length" class="sc-autocomplete-screencover" ng-click="sc.onBlur()"></div>
+	<input 
+		type="text" 
+		class="sc-autocomplete-input" 
+		ng-model="sc.searchText " 
+		ng-focus="sc.search()" 
+		ng-keydown="sc.onKeydown($event)" 
+		ng-change="sc.search()" >
+	<div ng-show="sc.searchResults.length" class="sc-autocomplete-list" >
+		<a 
+			ng-click="sc.onSelect($index)" 
+			ng-repeat="item in sc.searchResults" 
+			class="sc-autocomplete-listitem" 
+			ng-class="{ active: ($index == sc.activeIndex) }" > {{ item }}
+		</a>
+	</div>
+</div>

@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Example</title>
+	<!-- build:script files --><!-- /build -->
+	<!-- build:style files --><!-- /build -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body ng-app="app" ng-controller="MainCtrl">
+
+	<div class="row text-center heading-container" >
+		<h1>SC-AUTOCOMPLETE JQUERY EXAMPLE</h1>
+	</div>
+
+	<div id="autocomplete"></div>
+
+	<div class="container" class="margin-top" >
+		<h3 class="text-center text-muted">Searchables: </h3>
+		<ul id="searchables-list" class="list-group list-scroll" ></ul>
+	</div>
+
+	<div class="container" class="margin-top" >
+		<div class="row text-center">
+			<h3 class="text-muted">Add Entry</h3>
+
+			<p>Add new items here, multiple search terms can be added by deliminating with |</p>
+			<p>ie: "Germany" - 'DE|DEU|Deutschland'</p>
+
+			<div class="form form-inline">
+				<div class="form-group">
+					<input id="key-input" placeholder="Item Name" class="form-control" type="text" >
+					<input id="value-input" placeholder="Search Terms" class="form-control" type="text" >
+				</div>
+				<button id="add-entry-btn" class="btn btn-default">Save</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="row text-center">
+		<h3>Current Selection: <small id="selection"></small></h3>
+	</div>
+
+</body>
+</html>

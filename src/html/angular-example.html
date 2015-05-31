@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Example</title>
+	<!-- build:script files --><!-- /build -->
+	<!-- build:style files --><!-- /build -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body ng-app="app" ng-controller="MainCtrl">
+
+	<div class="row text-center heading-container" >
+		<h1>SC-AUTOCOMPLETE ANGULAR EXAMPLE</h1>
+	</div>
+
+	<sc-autocomplete ng-model="selection" sc-autocomplete-searchables="searchables" ></sc-autocomplete>
+
+	<div class="container" class="margin-top" >
+		<h3 class="text-center text-muted">Searchables: </h3>
+		<ul class="list-group" class="list-scroll" >
+			<li ng-repeat="(k, v) in searchables" class="list-group-item">
+				<div class="media">
+					<div class="media-body">
+						<h5>{{ k }} - {{ v }}</h5>
+					</div>
+					<div class="media-right">
+						<button ng-click="removeEntry(k)" class="btn btn-danger">Delete</button>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="container" class="margin-top" >
+		<div class="row text-center">
+			<h3 class="text-muted">Add Entry</h3>
+
+			<p>Add new items here, multiple search terms can be added by deliminating with |</p>
+			<p>ie: "Germany" - 'DE|DEU|Deutschland'</p>
+
+			<div class="form form-inline">
+				<div class="form-group">
+					<input placeholder="Item Name" class="form-control" type="text" ng-model="key" >
+					<input placeholder="Search Terms" class="form-control" type="text" ng-model="value" >
+				</div>
+				<button class="btn btn-default" ng-click="addEntry(key, value)">Save</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="row text-center">
+		<h3>Current Selection: <small>{{ selection }}</small></h3>
+	</div>
+
+</body>
+</html>
