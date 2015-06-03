@@ -15,6 +15,11 @@ function AutoComplete (el) {
 
 	// Get the dropdown list
 	this.dropdown = getElementByClass(el[0], Classes.List);
+
+	this.searchables = {};
+	this.searchItems = {};
+	this.searchResults = [];
+	this.callbacks = {};
 	
 	// Manually set the style of the screen cover
 	setScreencoverStyle(el[0]);
@@ -46,25 +51,25 @@ AutoComplete.prototype.dropdown = null;
  * The data which was last provided to AutoComplete#recompile.
  * @type {Object|Array}
  */
-AutoComplete.prototype.searchables = {};
+AutoComplete.prototype.searchables = null;
 
 /**
  * Generated set of search terms to check input against.
  * @type {Object}
  */
-AutoComplete.prototype.searchItems = {};
+AutoComplete.prototype.searchItems = null;
 
 /**
  * Results of the last invokation of AutoComplete#search.
  * @type {Array}
  */	
-AutoComplete.prototype.searchResults = [];
+AutoComplete.prototype.searchResults = null;
 
 /**
  * Callbacks registered via AutoComplete#on. 
  * @type {Object}
  */
-AutoComplete.prototype.callbacks = {};
+AutoComplete.prototype.callbacks = null;
 
 
 /**
