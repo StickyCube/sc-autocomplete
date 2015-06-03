@@ -10,7 +10,7 @@ describe('Basic tests 1 - ', function () {
 		jasmine.addMatchers(jasmineMatchers);
 	});
 
-	beforeEach(module('sc.autocomplete'));
+	beforeEach(module('sc-autocomplete'));
 
 	beforeEach(inject(function (_$rootScope_, _$compile_) {
 		$rootScope = _$rootScope_;

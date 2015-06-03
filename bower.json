@@ -1,9 +1,10 @@
 {
 	"name": "sc-autocomplete",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"main": "dist",
 	"ignore": [
 		".jshintrc",
-		"node_modules"
+		"node_modules",
+		"libs",
 	]
 }

@@ -22,6 +22,10 @@ angular.module('sc-autocomplete', [])
 						$scope.sc.recompile(newVal);
 					}
 				}, true);
+
+				if (angular.isDefined($scope.selection)) {
+					$scope.sc.searchText = $scope.selection;
+				}
 			}
 		};
 	}

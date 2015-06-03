@@ -9,8 +9,9 @@ module.exports = function (config) {
     files: [
         'libs/angular.1.3.15.min.js',
         'libs/*.js',
-        'src/autocomplete.js',
-        'src/sc-autocomplete.tpls.js',
+        'src/js/autocomplete.js',
+        // 'dist/autocomplete.js',
+        'dist/sc-autocomplete.angular.tpls.js',
         'test/unit_tests/*.spec.js'
     ],
 
