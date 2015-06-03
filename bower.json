@@ -5,6 +5,6 @@
 	"ignore": [
 		".jshintrc",
 		"node_modules",
-		"libs",
+		"libs"
 	]
 }
